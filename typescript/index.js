@@ -2,6 +2,8 @@
 // there are  two ways you can write ts and both are shown below one is when you use :type and other is simple how you write your js code and ts can understand that it is a number if you assign the value immediately like below
 // let a:number = 10;
 // let a = 10;
+// let x:number
+// x= 55;
 // let b:number = 10;
 // let b = 10;
 // let c:number = a + b;
@@ -25,8 +27,17 @@
 // }
 // console.log(add(5));
 // this is how you make an arrow function in typescript
-// so basically we need to specify what is the type of the parameters and what the out would be (this is my observastion about the below starting level program)
+// so basically we need to specify what is the type of the parameters and what the output would be (this is my observastion about the below starting level program)
 // const sum = (a: number, b: number): number => {
 //     return a + b;
 // };
 // console.log(sum(9, 9));
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//  in the below code we are defining type alias and we are defining Variables can either be a string or a number
+// type Variables = string | number; 
+// let a:Variables =  55 //"55"
+//////////////////////////////////////////////////////////////////////////
+// array in typescript
+// first way 
+var arr = [77, 88, 99, "sam"];
+console.log(arr);

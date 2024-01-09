@@ -4,7 +4,8 @@
 
 // let a:number = 10;
 // let a = 10;
-
+// let x:number
+// x= "55";
 // let b:number = 10;
 // let b = 10;
 
@@ -49,10 +50,53 @@
 
 // this is how you make an arrow function in typescript
 
-// so basically we need to specify what is the type of the parameters and what the out would be (this is my observastion about the below starting level program)
+// so basically we need to specify what is the type of the parameters and what the output would be (this is my observastion about the below starting level program)
 
 // const sum = (a: number, b: number): number => {
 //     return a + b;
 // };
 
 // console.log(sum(9, 9));
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+//  in the below code we are defining type alias and we are defining Variables can either be a string or a number
+
+// type Variables = string | number; 
+
+// let a:Variables =  55 //"55"
+
+//////////////////////////////////////////////////////////////////////////
+
+
+// array in typescript
+
+// first one
+
+// let x:number[] 
+
+// x = [11,22,333]
+
+// let y: string[] = ["ww","22"]
+
+//  second one
+
+// let arr:Array<string> 
+// arr = ["Shashank","mishra"]
+
+// arr.forEach(i=>{
+//     i.toUpperCase()
+// })
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+const obj:{
+    
+}
+
+ 
+
+
+
+
+
