@@ -152,4 +152,75 @@
 //     },
 // }
 
-// obj2.funct(10,10)  // this is how we call a function which is defined in the object
+// obj2.funct(10,10)  
+// this is how we call a function which is defined in the object
+
+////////////////////////////////////////////////////////////////////////////////
+
+// functions in ts
+
+// type Func = (n:number, m:number, l?:number) => number
+
+// function with array
+// type Func = ( ...m:number[] ) => number[]
+
+// const fun:Func = (...m) =>{
+//     return m;
+// }
+
+// fun(44,55,66)
+
+// const add:Func = (n,m,l)=>{
+//     if(typeof l == "undefined")  return l=n*m 
+//     return l = n*m*l;
+//     // when l is undefined then we can't use l in the operatin so we have to put a condition
+// }
+
+// add(2,3)
+
+
+// function add (n:number):number{
+//     return 12
+// }
+
+
+// function with objects
+
+// type Obj = {name:string,age:number,profession:string,no:number,readonly id:string}
+// readonly element cannot be changed 
+
+// const funObj = (human:Obj) => {
+//     console.log(human);
+    
+// }
+//  const me:Obj = {
+//     name: "Shashank",
+//     age: 22,
+//     profession: "jobless",
+//     no : 7307853223,
+//     id:"gfdfghfghxfgghncfyguhn"
+
+//  }
+
+//  const tanu:Obj = {
+//     name: "Sakshi",
+//     age: 20,
+//     profession: "student",
+//     no : 9918730493,
+//     id: "jhgfdrtyujhdrtu"
+//  }
+
+//  funObj(me)
+//  funObj(tanu)
+
+// type themeMode = "light" | "dark"
+
+// const errorHandler = ():never =>{
+//     throw new Error();
+// }
+
+// const mode:themeMode = "light"
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// main things means classes 
