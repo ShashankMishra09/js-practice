@@ -224,3 +224,37 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // main things means classes 
+
+
+// in typescript classes have access modifiers while in js they are not present and they are used as they are used in c++ so i'm not gonna cover it here you can write it like simply specifying public private and protected in front of you variable
+class Human{
+    age;
+    name;
+    constructor(age:number,name:string){
+        this.age = age
+        this.name = name
+    }
+    get getMyAge(): number {
+        return this.age
+    }
+    set changeAge(newAge:number) {
+         this.age = newAge
+    }
+}
+
+const me = new Human(20,"Shashank")
+me.changeAge = 50;
+
+class You extends Human {
+    verified:boolean;
+    constructor(age:number,name:string,verified:boolean){
+        super(age,name)   
+         // Constructors for derived classes must contain a super call. which is for the parent class
+         this.verified = verified
+    }
+}
+
+const tanu = new You(20,"Sakshi",true)
+
+console.log(tanu.name);
+
