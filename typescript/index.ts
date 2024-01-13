@@ -227,34 +227,67 @@
 
 
 // in typescript classes have access modifiers while in js they are not present and they are used as they are used in c++ so i'm not gonna cover it here you can write it like simply specifying public private and protected in front of you variable
-class Human{
-    age;
-    name;
-    constructor(age:number,name:string){
-        this.age = age
-        this.name = name
-    }
-    get getMyAge(): number {
-        return this.age
-    }
-    set changeAge(newAge:number) {
-         this.age = newAge
-    }
+// class Human{
+//     age;
+//     name;
+//     constructor(age:number,name:string){
+//         this.age = age
+//         this.name = name
+//     }
+//     get getMyAge(): number {
+//         return this.age
+//     }
+//     set changeAge(newAge:number) {
+//          this.age = newAge
+//     }
+// }
+
+// const me = new Human(20,"Shashank")
+// me.changeAge = 50;
+
+// class You extends Human {
+//     verified:boolean;
+//     constructor(age:number,name:string,verified:boolean){
+//         super(age,name)   
+//          // Constructors for derived classes must contain a super call. which is for the parent class
+//          this.verified = verified
+//     }
+// }
+
+// const tanu = new You(20,"Sakshi",true)
+
+// console.log(tanu.name);
+
+///////////////////////////////////////////////////////
+
+// dom manipulation
+
+// type assertion
+
+// below are three ways in which we can manipulate dom if we don't do type assertion then we have to use ? sign where we are using onclick function
+
+// const btn = document.getElementById("btn") as HTMLElement
+// const btn =<HTMLElement> document.getElementById("btn") 
+// const btn = document.getElementById("btn")!
+
+// btn.onclick
+
+
+// so in case the tags that contain properties are needed to be specified or we can use queryselector and ! (not null) mark to use img
+
+// const img = document.getElementById("image") as HTMLImageElement
+
+// const img = document.querySelector("img")!
+
+// img.src
+
+const form = document.getElementById("form") as HTMLFormElement
+const input = document.querySelector("form > input") as HTMLInputElement
+
+
+form.onsubmit=(e)=>{
+    e.preventDefault();
+    console.log(input.value);
+    input.value = " "
+    
 }
-
-const me = new Human(20,"Shashank")
-me.changeAge = 50;
-
-class You extends Human {
-    verified:boolean;
-    constructor(age:number,name:string,verified:boolean){
-        super(age,name)   
-         // Constructors for derived classes must contain a super call. which is for the parent class
-         this.verified = verified
-    }
-}
-
-const tanu = new You(20,"Sakshi",true)
-
-console.log(tanu.name);
-

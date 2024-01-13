@@ -1,19 +1,4 @@
 //@ts-ignore
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 // there are  two ways you can write ts and both are shown below one is when you use :type and other is simple how you write your js code and ts can understand that it is a number if you assign the value immediately like below
 // let a:number = 10;
 // let a = 10;
@@ -161,38 +146,48 @@ var __extends = (this && this.__extends) || (function () {
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 // main things means classes 
 // in typescript classes have access modifiers while in js they are not present and they are used as they are used in c++ so i'm not gonna cover it here you can write it like simply specifying public private and protected in front of you variable
-var Human = /** @class */ (function () {
-    function Human(age, name) {
-        this.age = age;
-        this.name = name;
-    }
-    Object.defineProperty(Human.prototype, "getMyAge", {
-        get: function () {
-            return this.age;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(Human.prototype, "changeAge", {
-        set: function (newAge) {
-            this.age = newAge;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    return Human;
-}());
-var me = new Human(20, "Shashank");
-me.changeAge = 50;
-var You = /** @class */ (function (_super) {
-    __extends(You, _super);
-    function You(age, name, verified) {
-        var _this = _super.call(this, age, name) || this;
-        // Constructors for derived classes must contain a super call. which is for the parent class
-        _this.verified = verified;
-        return _this;
-    }
-    return You;
-}(Human));
-var tanu = new You(20, "Sakshi", true);
-console.log(tanu.name);
+// class Human{
+//     age;
+//     name;
+//     constructor(age:number,name:string){
+//         this.age = age
+//         this.name = name
+//     }
+//     get getMyAge(): number {
+//         return this.age
+//     }
+//     set changeAge(newAge:number) {
+//          this.age = newAge
+//     }
+// }
+// const me = new Human(20,"Shashank")
+// me.changeAge = 50;
+// class You extends Human {
+//     verified:boolean;
+//     constructor(age:number,name:string,verified:boolean){
+//         super(age,name)   
+//          // Constructors for derived classes must contain a super call. which is for the parent class
+//          this.verified = verified
+//     }
+// }
+// const tanu = new You(20,"Sakshi",true)
+// console.log(tanu.name);
+///////////////////////////////////////////////////////
+// dom manipulation
+// type assertion
+// below are three ways in which we can manipulate dom if we don't do type assertion then we have to use ? sign where we are using onclick function
+// const btn = document.getElementById("btn") as HTMLElement
+// const btn =<HTMLElement> document.getElementById("btn") 
+// const btn = document.getElementById("btn")!
+// btn.onclick
+// so in case the tags that contain properties are needed to be specified or we can use queryselector and ! (not null) mark to use img
+// const img = document.getElementById("image") as HTMLImageElement
+// const img = document.querySelector("img")!
+// img.src
+var form = document.getElementById("form");
+var input = document.querySelector("form > input");
+form.onsubmit = function (e) {
+    e.preventDefault();
+    console.log(input.value);
+    input.value = " ";
+};
