@@ -281,13 +281,22 @@
 
 // img.src
 
-const form = document.getElementById("form") as HTMLFormElement
-const input = document.querySelector("form > input") as HTMLInputElement
+// const form = document.getElementById("form") as HTMLFormElement
+// const input = document.querySelector("form > input") as HTMLInputElement
 
 
-form.onsubmit=(e)=>{
-    e.preventDefault();
-    console.log(input.value);
-    input.value = " "
-    
-}
+// form.onsubmit=(e:SubmitEvent)=>{
+//     e.preventDefault();
+//     console.log(input.value);
+//     let name = input.value
+//     alert(`hello ${name}`)
+//     input.value = ""
+//     const h1 = document.createElement("h1")
+//     h1.textContent = `hello ${name}`
+//    const body = document.querySelector("body") as HTMLBodyElement
+//    body.append(h1)    
+// }
+
+
+
+
