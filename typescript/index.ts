@@ -297,6 +297,79 @@
 //    body.append(h1)    
 // }
 
+////////////////////////////////////////////////////////////////////////////////
 
+// interface Person {
+//     name:string
+//     email:string
+// }
 
+// const obj:Person = {
+//     name:"Sam",
+//     email:"shashank@gmail.com"
+// }
 
+// const getName = ():string=>{
+//     return obj.name
+// }
+
+// const getEmail = ():string=>{
+//     return obj.email
+// }
+
+// const getData = (key:keyof Person):string=>{
+//     return obj[key]
+// }
+
+//////////////////////////////////////////////////////////////////////////////////
+
+//  Type Utility
+
+// Partial
+
+// this utility makes the properties optional
+
+// type User = {
+//     name:string,
+//     num:number
+// }
+
+// type User2 = Partial<User>
+// **************************************************** //
+// Required  "it is opposite of required"
+
+// type User = {
+//     name?:string,
+//     num?:number
+// }
+
+// type User2 = Required<User>
+
+// ***************************************************** //
+
+//  Readonly  "makes the properties only readable not writeable "
+
+// type User = {
+//     name:string,
+//     num:number
+// }
+
+// const user2:Readonly<User> = {
+//     name: "sam",
+//     num:8
+// }
+
+// ****************************************************** //
+
+// Record<type> 
+
+type User = {
+    name:string,
+    num:number,
+    valid:boolean
+}
+ type Comapany = {
+    loc:string,
+    id:number
+ }
+// const emp:Record<User , Comapany> = {}
