@@ -364,12 +364,16 @@
 // Record<type> 
 
 type User = {
-    name:string,
-    num:number,
-    valid:boolean
-}
- type Comapany = {
-    loc:string,
-    id:number
- }
-// const emp:Record<User , Comapany> = {}
+    name: string;
+    num: number;
+};
+
+type Company = {
+    loc: string;
+};
+
+const emp: Record<string, Company> = {
+    // You can add entries here with keys of type string and values of type Company
+    "user1": { loc: "CompanyA" },
+    "user2": { loc: "CompanyB" },
+};
