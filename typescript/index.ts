@@ -361,7 +361,7 @@
 
 // ****************************************************** //
 
-// Record<type> 
+// Record<keys,type> 
 
 type User = {
     name: string;
