@@ -363,17 +363,125 @@
 
 // Record<keys,type> 
 
-type User = {
-    name: string;
-    num: number;
-};
+// type User = {
+//     num: number;
+// };
 
-type Company = {
-    loc: string;
-};
+// type UserName = "Sam" | "Dean" | "Bobby" | "Cas"
 
-const emp: Record<string, Company> = {
-    // You can add entries here with keys of type string and values of type Company
-    "user1": { loc: "CompanyA" },
-    "user2": { loc: "CompanyB" },
-};
+// const emp: Record<UserName, User> = {
+//     Sam:{num:88}
+// };
+
+// ****************************************************** //
+
+//  Pick<type, keys>
+
+// we can pick what we want what we dont
+
+// type lol ={
+//     readonly id:string,
+//     user:string,
+//     joke:string,
+//     laughs:number,
+// }
+
+// type choose = Pick<lol,"joke" | "laughs">
+
+// ****************************************************** //
+
+// Omit<type,keys>
+
+// opposite of pick leave the selected
+
+// type lol ={
+//     readonly id:string,
+//     user:string,
+//     joke:string,
+//     laughs:number,
+// }
+
+// type choose = Omit<lol,"joke" | "laughs">
+
+
+// ****************************************************** //
+
+// Exclude<type,keys>
+
+// exclude the type selected
+
+// type lol = string | boolean | number
+
+// type choose = Exclude<lol,string>
+
+// ****************************************************** //
+
+
+// Extract
+
+// it does opposite of the exclude and extract only  mentioned
+
+// type lol = string | boolean | number
+
+// type choose = Extract<lol,string | boolean>
+
+// ****************************************************** //
+
+// Nonnullable
+
+//just tells its name
+
+// type lol = string | boolean | number
+
+// type choose = NonNullable<lol>
+
+// ****************************************************** //
+
+// parameters<>type
+
+// gives parameters as array
+
+// const myF = (a:number,b:number) =>{
+//     return a+b
+// }
+
+// type fun  = Parameters<typeof myF>
+
+// ****************************************************** //
+
+// ConstructorParameters<Type>
+
+// tells the type of constructer parameter
+
+// class SampleClass {
+//     constructor(public s:string,public p:string){}
+// }
+
+// type test = ConstructorParameters<typeof SampleClass>
+
+// ****************************************************** //
+
+// ReturnType<Type>
+
+// tells the return type of a function
+
+// const myF = (a:number,b:number) =>{
+//     return a+b
+// }
+
+// type fun = ReturnType<typeof myF>
+
+// ****************************************************** //
+
+// InstanceType<Type>
+
+// class SampleClass {
+//     constructor(public s:string,public p:string){}
+// }
+
+// type random = InstanceType<typeof SampleClass>
+
+// const user:random = {
+//     s:"99",
+//     p:"ss"
+// }
