@@ -485,3 +485,25 @@
 //     s:"99",
 //     p:"ss"
 // }
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+//  Generics
+
+const fun = <t>(n:t):t =>{
+    let i =10;
+    return n
+}
+
+type Person = {
+    name:string,
+    age:number
+}
+
+const human: Person = {
+    name:"sam",
+    age:22
+}
+
+const ans = <Person>fun(human)
+const ans1 = <string> fun("20")
