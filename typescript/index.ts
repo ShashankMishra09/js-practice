@@ -490,20 +490,62 @@
 
 //  Generics
 
-const fun = <t>(n:t):t =>{
-    let i =10;
-    return n
-}
+// const fun = <t>(n:t):t =>{
+//     let i =10;
+//     return n
+// }
 
-type Person = {
+// type Person = {
+//     name:string,
+//     age:number
+// }
+
+// const human: Person = {
+//     name:"sam",
+//     age:22
+// }
+
+// const ans = <Person>fun(human)
+// const ans1 = <string> fun("20")
+
+//so this is how the generics are used in typescript
+
+// const sma  = <a,b>(t:a,u:b):{t:a,u:b} => {
+//     return {t,u};
+// }
+
+// const ans = sma(20,"20")
+
+// when we use extend in generics so basically we are adding the qualities of one but we can also have our own qualities
+
+type human = {
     name:string,
-    age:number
+    age:number,
+    valid:boolean,
 }
 
-const human: Person = {
-    name:"sam",
-    age:22
-}
+const user:human[]=[
+    {
+        name:"sam",
+        age:18,
+        valid:true
+    },
+    {
+        name:"jack",
+        age:8,
+        valid:false
+    },
+    {
+        name:"baki",
+        age:28,
+        valid:true
+    },
+    {
+        name:"ram",
+        age:18,
+        valid:true
+    }
+]
 
-const ans = <Person>fun(human)
-const ans1 = <string> fun("20")
+const filtByPeople = (arr:any,property:any,value:any)=>{}
+
